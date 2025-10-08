@@ -1,19 +1,23 @@
-import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import BusinessUnits from "@/components/BusinessUnits";
-import Values from "@/components/Values";
-import Footer from "@/components/Footer";
+import TancorpNavigation from "@/components/TancorpNavigation";
+import TancorpHero from "@/components/TancorpHero";
+import TancorpCulture from "@/components/TancorpCulture";
+import TancorpStats from "@/components/TancorpStats";
+import TancorpVision from "@/components/TancorpVision";
+import TancorpBusinessUnits from "@/components/TancorpBusinessUnits";
+import TancorpNews from "@/components/TancorpNews";
+import TancorpFooter from "@/components/TancorpFooter";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <About />
-      <BusinessUnits />
-      <Values />
-      <Footer />
+      <TancorpNavigation />
+      <TancorpHero />
+      <TancorpCulture />
+      <TancorpStats />
+      <TancorpVision />
+      <TancorpBusinessUnits />
+      <TancorpNews />
+      <TancorpFooter />
     </div>
   );
 };
