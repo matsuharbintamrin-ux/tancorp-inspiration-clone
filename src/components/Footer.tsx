@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,24 +10,37 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-xl">E</span>
-              </div>
-              <span className="font-bold text-xl">Excellence Corp</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <img
+                src={logo}
+                alt="Surya Grisse Logo"
+                className="h-12 w-auto object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
+              />
+              <span className="font-bold text-xl">Surya Grisse</span>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed">
-              Perusahaan induk terkemuka yang menghadirkan nilai, membangun dampak sosial, 
-              dan mendorong keberlanjutan.
+              Surya Grisse adalah perusahaan manufaktur arang premium berbahan dasar
+              100% tempurung kelapa. Kami berkomitmen menghadirkan produk berkualitas tinggi
+              dan ramah lingkungan untuk pasar lokal maupun internasional.
             </p>
+
             <div className="flex space-x-4 pt-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-accent flex items-center justify-center transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -34,7 +48,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Tautan Cepat</h3>
+            <h3 className="font-bold text-lg mb-4">Navigasi</h3>
             <ul className="space-y-3">
               <li>
                 <a href="#about" className="text-primary-foreground/80 hover:text-accent transition-colors">
@@ -42,31 +56,31 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#business" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  Unit Bisnis
+                <a href="#products" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Produk Kami
                 </a>
               </li>
               <li>
-                <a href="#values" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  Nilai Kami
+                <a href="#sustainability" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Keberlanjutan
                 </a>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-accent transition-colors">
-                  Karir
+                <a href="#contact" className="text-primary-foreground/80 hover:text-accent transition-colors">
+                  Hubungi Kami
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Business */}
+          {/* Products */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Unit Bisnis</h3>
+            <h3 className="font-bold text-lg mb-4">Produk Unggulan</h3>
             <ul className="space-y-3">
-              <li className="text-primary-foreground/80">Manufaktur</li>
-              <li className="text-primary-foreground/80">Distribusi & Retail</li>
-              <li className="text-primary-foreground/80">Teknologi</li>
-              <li className="text-primary-foreground/80">Properti</li>
+              <li className="text-primary-foreground/80">Briket Arang Shisha</li>
+              <li className="text-primary-foreground/80">Briket Arang BBQ</li>
+              <li className="text-primary-foreground/80">Arang Aktif Tempurung Kelapa</li>
+              <li className="text-primary-foreground/80">OEM / Custom Order</li>
             </ul>
           </div>
 
@@ -77,16 +91,16 @@ const Footer = () => {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-accent mt-1 flex-shrink-0" />
                 <span className="text-primary-foreground/80">
-                  Jl. Sudirman No. 123<br />Jakarta Pusat, 10220
+                  Jl. Raya Grisse No. 88<br />Gresik, Jawa Timur, Indonesia
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-primary-foreground/80">+62 21 1234 5678</span>
+                <span className="text-primary-foreground/80">+62 812 3456 7890</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <span className="text-primary-foreground/80">info@excellence.id</span>
+                <span className="text-primary-foreground/80">info@suryagrisse.com</span>
               </li>
             </ul>
           </div>
@@ -96,7 +110,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-primary-foreground/60 text-sm">
-              © {currentYear} Excellence Corporation. All rights reserved.
+              © {currentYear} Surya Grisse. Seluruh hak cipta dilindungi.
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">

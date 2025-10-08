@@ -9,16 +9,20 @@ const TancorpCulture = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Hadir dengan <span className="italic">tagline</span> "For a Better Human Life", Tancorp memiliki 
-              visi dan misi menyejahterakan Bangsa Indonesia. Dalam mewujudkan visi dan misi tersebut, 
-              kami membangun culture yang kami sebut dengan <span className="font-bold text-accent">CINTA</span>.
+              Hadir dengan <span className="italic">tagline</span> "For a Better Human Life", 
+              <span className="font-semibold"> Surya Grisse</span> memiliki visi dan misi menghadirkan 
+              produk arang premium dan layanan terbaik bagi pelanggan. Dalam mewujudkannya, 
+              kami membangun budaya kerja yang kami sebut dengan 
+              <span className="font-bold text-accent"> CINTA</span>.
             </p>
+
           </div>
 
           <div className="flex justify-center">
-            <a
-              href="#"
-              className="inline-block px-12 py-4 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-lg font-medium"
+             <a
+              href="#products"
+              className="px-8 py-4 bg-accent text-white text-lg font-semibold shadow-md 
+              hover:bg-accent/90 transition-all duration-300 hover:scale-105"
             >
               View more
             </a>

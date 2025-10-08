@@ -7,7 +7,8 @@ import TancorpBusinessUnits from "@/components/TancorpBusinessUnits";
 import TancorpImageSection from "@/components/TancorpImageSection";
 import TancorpNews from "@/components/TancorpNews";
 import TancorpFooter from "@/components/TancorpFooter";
-
+import CompanyPerspective from "@/components/CompanyPerspective";
+import ProductsExpertise from "@/components/ProductsExpertise";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -15,10 +16,12 @@ const Index = () => {
       <TancorpHero />
       <TancorpCulture />
       <TancorpStats />
-      <TancorpVision />
+      {/*<TancorpVision /> */}
       <TancorpBusinessUnits />
       <TancorpImageSection />
-      <TancorpNews />
+      <ProductsExpertise />
+      <CompanyPerspective />
+      {/*<TancorpNews /> */}
       <TancorpFooter />
     </div>
   );

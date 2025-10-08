@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png"; // ✅ import logo di atas
 
 const TancorpNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,24 +14,31 @@ const TancorpNavigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-primary shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-primary shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-24">
+          {/* ✅ Logo */}
           <div className="flex items-center">
-            <div className="text-primary-foreground font-bold text-3xl tracking-wider">
-              TANCORP
-            </div>
+            <img
+              src={logo}
+              alt="Tancorp Logo"
+              className="h-12 md:h-16 w-auto object-contain 
+             drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]
+             brightness-110 
+             contrast-120"
+            />
+
           </div>
 
+          {/* ✅ Navigation menu */}
           <div className="hidden md:flex items-center space-x-12">
             <a
               href="#tancorp"
               className="text-primary-foreground/90 hover:text-accent transition-colors duration-300 font-medium text-sm tracking-wider uppercase"
             >
-              TANCORP
+              HOME
             </a>
             <a
               href="#business"
@@ -42,7 +50,7 @@ const TancorpNavigation = () => {
               href="#careers"
               className="text-primary-foreground/90 hover:text-accent transition-colors duration-300 font-medium text-sm tracking-wider uppercase"
             >
-              CAREERS
+              PRODUCTS
             </a>
           </div>
         </div>
