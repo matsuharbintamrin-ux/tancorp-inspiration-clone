@@ -4,7 +4,7 @@ import ProductHero from "@/components/product/ProductHero";
 import ProductBreadcrumb from "@/components/product/ProductBreadcrumb";
 import ProductImage from "@/components/product/ProductImage";
 import ProductDetails from "@/components/product/ProductDetails";
-import HexagonalCharcoalSection from "@/components/product/HexagonalCharcoalSection"; // ⬅️ tambahkan ini
+import HexagonalCharcoalSection from "@/components/product/HexagonalCharcoalSection"; // ✅ Tambahkan section baru
 
 const ProductPage = () => {
   const { slug } = useParams(); // ambil slug dari URL
@@ -12,16 +12,22 @@ const ProductPage = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* 🔹 Header, Hero, dan Breadcrumb */}
       <ProductHeader />
       <ProductHero />
       <ProductBreadcrumb />
 
-      <section className="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 gap-10">
-        <ProductImage />
-        <ProductDetails />
+      {/* 🔹 Gambar & Detail Produk */}
+      <section className="container mx-auto px-4 py-12 flex flex-col md:grid md:grid-cols-2 gap-10">
+        <div className="order-1 md:order-none">
+          <ProductImage />
+        </div>
+        <div className="order-2 md:order-none">
+          <ProductDetails />
+        </div>
       </section>
 
-      {/* 🟢 Tambahkan section "What Makes Us the Obvious Choice" + FAQ */}
+      {/* 🟢 Section tambahan: "What Makes Us the Obvious Choice" + FAQ */}
       <HexagonalCharcoalSection />
     </div>
   );
