@@ -60,7 +60,7 @@ const HexagonalCharcoalSection = () => {
 
             <AccordionItem value="item-3">
               <AccordionTrigger className="text-lg font-medium text-white hover:text-accent">
-                3. Apakah Red Star Charcoal ramah lingkungan?
+                3. Apakah Surya Grisse Charcoal ramah lingkungan?
               </AccordionTrigger>
               <AccordionContent className="text-white/70">
                 Ya. Proses produksi kami menggunakan metode ramah lingkungan yang meminimalkan emisi dan hanya memakai bahan baku terbarukan.

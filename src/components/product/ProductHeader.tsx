@@ -11,7 +11,7 @@ const ProductHeader = () => {
           <a href="/" className="flex items-center gap-3">
             <img
               src={redstarLogo}
-              alt="Red Star Charcoal Logo"
+              alt="Surya Grisse Charcoal Logo"
               className="h-10 w-auto object-contain"
             />
           </a>
