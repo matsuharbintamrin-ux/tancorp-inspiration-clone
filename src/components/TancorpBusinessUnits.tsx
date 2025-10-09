@@ -2,26 +2,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { useNavigate } from "react-router-dom"; // ⬅️ tambahkan ini
 import charcoalPic from "@/assets/hexagonal.jpg";
 
 const ProductVariant = () => {
+  const navigate = useNavigate(); // ⬅️ inisialisasi router
+
   const variants = [
-    { name: "Hexagonal Charcoal", subtitle: "Permukaan luas, panas merata", image: charcoalPic },
-    { name: "Perforated Charcoal", subtitle: "Efisien untuk kebutuhan besar", image: charcoalPic },
-    { name: "Special Charcoal", subtitle: "Bentuk khusus sesuai permintaan", image: charcoalPic },
-    { name: "Hardwood Charcoal", subtitle: "Bahan kayu alami, panas cepat", image: charcoalPic },
-    { name: "Barbeque Charcoal", subtitle: "Aman untuk makanan & BBQ", image: charcoalPic },
-    { name: "Finger Charcoal", subtitle: "Ukuran kecil, mudah disusun", image: charcoalPic },
-    { name: "Coconut Charcoal", subtitle: "Ramah lingkungan dan tahan lama", image: charcoalPic },
-    { name: "Premium Export", subtitle: "Standar ekspor internasional", image: charcoalPic },
-    { name: "Cube Charcoal", subtitle: "Cocok untuk shisha dan makanan", image: charcoalPic },
-    { name: "Eco Charcoal", subtitle: "Menggunakan bahan ramah lingkungan", image: charcoalPic },
-    { name: "Quick Burn", subtitle: "Cepat menyala, cocok untuk dapur", image: charcoalPic },
-    { name: "Long Lasting", subtitle: "Tahan panas lebih lama", image: charcoalPic },
-    { name: "BBQ Pro", subtitle: "Untuk kebutuhan kuliner profesional", image: charcoalPic },
-    { name: "Coconut Premium", subtitle: "Kualitas tinggi dari kelapa pilihan", image: charcoalPic },
-    { name: "Outdoor Charcoal", subtitle: "Ideal untuk aktivitas luar ruangan", image: charcoalPic },
-    { name: "Black Diamond", subtitle: "Varian eksklusif berstandar tinggi", image: charcoalPic },
+    { name: "Hexagonal Charcoal", subtitle: "Permukaan luas, panas merata", image: charcoalPic, slug: "hexagonal-charcoal" },
+    { name: "Perforated Charcoal", subtitle: "Efisien untuk kebutuhan besar", image: charcoalPic, slug: "perforated-charcoal" },
+    { name: "Special Charcoal", subtitle: "Bentuk khusus sesuai permintaan", image: charcoalPic, slug: "special-charcoal" },
+    { name: "Hardwood Charcoal", subtitle: "Bahan kayu alami, panas cepat", image: charcoalPic, slug: "hardwood-charcoal" },
+    { name: "Barbeque Charcoal", subtitle: "Aman untuk makanan & BBQ", image: charcoalPic, slug: "barbeque-charcoal" },
+    { name: "Finger Charcoal", subtitle: "Ukuran kecil, mudah disusun", image: charcoalPic, slug: "finger-charcoal" },
+    { name: "Coconut Charcoal", subtitle: "Ramah lingkungan dan tahan lama", image: charcoalPic, slug: "coconut-charcoal" },
+    { name: "Premium Export", subtitle: "Standar ekspor internasional", image: charcoalPic, slug: "premium-export" },
+    { name: "Cube Charcoal", subtitle: "Cocok untuk shisha dan makanan", image: charcoalPic, slug: "cube-charcoal" },
+    { name: "Eco Charcoal", subtitle: "Menggunakan bahan ramah lingkungan", image: charcoalPic, slug: "eco-charcoal" },
+    { name: "Quick Burn", subtitle: "Cepat menyala, cocok untuk dapur", image: charcoalPic, slug: "quick-burn" },
+    { name: "Long Lasting", subtitle: "Tahan panas lebih lama", image: charcoalPic, slug: "long-lasting" },
+    { name: "BBQ Pro", subtitle: "Untuk kebutuhan kuliner profesional", image: charcoalPic, slug: "bbq-pro" },
+    { name: "Coconut Premium", subtitle: "Kualitas tinggi dari kelapa pilihan", image: charcoalPic, slug: "coconut-premium" },
+    { name: "Outdoor Charcoal", subtitle: "Ideal untuk aktivitas luar ruangan", image: charcoalPic, slug: "outdoor-charcoal" },
+    { name: "Black Diamond", subtitle: "Varian eksklusif berstandar tinggi", image: charcoalPic, slug: "black-diamond" },
   ];
 
   // Bagi jadi kelompok 8 item per slide
@@ -56,7 +59,8 @@ const ProductVariant = () => {
                 {group.map((variant, i) => (
                   <div
                     key={i}
-                    className="group flex flex-col items-center p-8 bg-background hover:bg-accent transition-all duration-300 border-2 border-transparent hover:border-accent rounded-2xl"
+                    onClick={() => navigate(`/product/${variant.slug}`)} // ⬅️ navigasi ke halaman produk
+                    className="group flex flex-col items-center p-8 bg-background hover:bg-accent transition-all duration-300 border-2 border-transparent hover:border-accent rounded-2xl cursor-pointer"
                   >
                     <div className="w-32 h-32 rounded-full bg-primary/5 flex items-center justify-center mb-6 overflow-hidden">
                       <img

@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ProductPage from "./pages/ProductPage"; // ⬅️ tambahkan ini
 
 const queryClient = new QueryClient();
 
@@ -15,8 +16,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Halaman utama */}
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
+          {/* Halaman produk */}
+          <Route path="/product/:slug" element={<ProductPage />} /> {/* ⬅️ tambahkan ini */}
+
+          {/* Route fallback */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
