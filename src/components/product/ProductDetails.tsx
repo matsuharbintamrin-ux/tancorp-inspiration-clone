@@ -25,10 +25,10 @@ const ProductDetails = () => {
       <div>
         <Badge className="mb-3 bg-primary text-primary-foreground">Produk Premium</Badge>
         <h1 className="text-4xl font-bold mb-4">
-          Arang Heksagonal Ramah Lingkungan di Pleasure Point dari Red Star Charcoal
+          Arang Heksagonal Ramah Lingkungan di Pleasure Point dari Surya Grisse
         </h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
-          Red Star Charcoal yang berbasis di Pleasure Point adalah pemasok utama produk arang premium yang terkenal karena menghadirkan pengalaman memanggang dan kuliner yang luar biasa. 
+          Surya Grisse yang berbasis di Pleasure Point adalah pemasok utama produk arang premium yang terkenal karena menghadirkan pengalaman memanggang dan kuliner yang luar biasa. 
           Dengan pengalaman bertahun-tahun di industri arang, kami dikenal karena menyediakan arang heksagonal berkualitas tinggi, ramah lingkungan, dan tahan lama di Pleasure Point.
         </p>
       </div>
